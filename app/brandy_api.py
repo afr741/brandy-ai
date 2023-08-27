@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from app.brandy import generate_branding_snippet, generate_keywords
+from brandy import generate_branding_snippet, generate_keywords
 from mangum import Mangum
 
 MAX_INPUT_LENGTH = 12
