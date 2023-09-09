@@ -25,11 +25,11 @@ export class BrandyInfraStack extends Stack {
       },
     });
 
-    const copyKittApi = new apiGateway.RestApi(this, "RestApi", {
+    const brandyApi = new apiGateway.RestApi(this, "RestApi", {
       restApiName: "Brandy_AI API",
     });
 
-    copyKittApi.root.addProxy({
+    brandyApi.root.addProxy({
       defaultIntegration: new apiGateway.LambdaIntegration(apiLambda),
     });
   }
